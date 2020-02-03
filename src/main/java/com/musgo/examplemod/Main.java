@@ -1,10 +1,13 @@
 package com.musgo.examplemod;
 
 import com.musgo.examplemod.init.ModItemGroups;
+import com.musgo.examplemod.init.ModToolMaterials;
 import com.musgo.examplemod.items.LunarPotion;
+import com.musgo.examplemod.lib.ModItemIDs;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -68,8 +71,9 @@ public class Main {
             //add new items here!
             event.getRegistry().registerAll(
                    // new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location("lunar_potion"))
-                    new LunarPotion(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName("lunar_potion"),
-                    new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName("silver_ingot")
+                    new LunarPotion(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location(ModItemIDs.LUNAR_POTION_ID)),
+                    new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location(ModItemIDs.SILVER_INGOT)),
+                    new SwordItem(ModToolMaterials.silver, 0, 6.0f, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location(ModItemIDs.WITCHER_SWORD))
             );
 
             LOGGER.info("Items Registered");
