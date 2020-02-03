@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 public class ModItemGroups {
 
-    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(Main.MODID, () -> new ItemStack(ModItems.EXAMPLE_ITEM));
+    public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(Main.MODID, () -> new ItemStack(ModItems.LUNAR_POTION));
 
 
 

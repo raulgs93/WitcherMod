@@ -6,5 +6,5 @@ import net.minecraftforge.registries.ObjectHolder;
 
 @ObjectHolder(Main.MODID)
 public class ModItems {
-    public static final Item EXAMPLE_ITEM = null;
+    public static final Item LUNAR_POTION = null;
 }
