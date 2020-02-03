@@ -68,7 +68,8 @@ public class Main {
             //add new items here!
             event.getRegistry().registerAll(
                    // new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location("lunar_potion"))
-                    new LunarPotion(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName("lunar_potion")
+                    new LunarPotion(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName("lunar_potion"),
+                    new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName("silver_ingot")
             );
 
             LOGGER.info("Items Registered");
