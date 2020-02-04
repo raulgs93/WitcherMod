@@ -3,11 +3,12 @@ package com.musgo.examplemod.init;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
 public enum ModToolMaterials implements IItemTier {
 
-    silver(10.0f, 9.0f, 800, 3, 25, ModItems.SILVER_INGOT);
+    silver(ItemTier.DIAMOND.getAttackDamage(), ItemTier.IRON.getEfficiency(), ItemTier.IRON.getMaxUses(), ItemTier.IRON.getHarvestLevel(), ItemTier.GOLD.getEnchantability(), ModItems.SILVER_INGOT);
 
     private float attackDamage;
     private float efficiency;

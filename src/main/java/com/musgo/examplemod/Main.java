@@ -3,6 +3,7 @@ package com.musgo.examplemod;
 import com.musgo.examplemod.init.ModItemGroups;
 import com.musgo.examplemod.init.ModToolMaterials;
 import com.musgo.examplemod.items.LunarPotion;
+import com.musgo.examplemod.items.WitcherSword;
 import com.musgo.examplemod.lib.ModItemIDs;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -29,7 +30,7 @@ import java.util.stream.Collectors;
 public class Main {
     // Directly reference a log4j logger.
     public static final String MODID = "examplemod";
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public Main() {
         // Register the setup method for modloading
@@ -73,7 +74,7 @@ public class Main {
                    // new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location("lunar_potion"))
                     new LunarPotion(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location(ModItemIDs.LUNAR_POTION_ID)),
                     new Item(new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location(ModItemIDs.SILVER_INGOT)),
-                    new SwordItem(ModToolMaterials.silver, 0, 6.0f, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location(ModItemIDs.WITCHER_SWORD))
+                    new WitcherSword(ModToolMaterials.silver, 0, 6.0f, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location(ModItemIDs.WITCHER_SWORD))
             );
 
             LOGGER.info("Items Registered");
