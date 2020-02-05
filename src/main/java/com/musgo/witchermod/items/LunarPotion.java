@@ -1,4 +1,4 @@
-package com.musgo.examplemod.items;
+package com.musgo.witchermod.items;
 
 import net.minecraft.item.Item;
 

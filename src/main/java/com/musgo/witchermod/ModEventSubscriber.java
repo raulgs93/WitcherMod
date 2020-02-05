@@ -1,13 +1,11 @@
-package com.musgo.examplemod;
+package com.musgo.witchermod;
 
-import com.musgo.examplemod.init.ModItemGroups;
+import com.musgo.witchermod.init.ModItemGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
 //@Mod.EventBusSubscriber(modid = Main.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)

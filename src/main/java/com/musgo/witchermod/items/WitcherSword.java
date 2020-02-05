@@ -1,20 +1,13 @@
-package com.musgo.examplemod.items;
+package com.musgo.witchermod.items;
 
-import com.musgo.examplemod.Main;
-import net.minecraft.entity.CreatureEntity;
+import com.musgo.witchermod.Main;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.monster.AbstractRaiderEntity;
 import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.passive.PigEntity;
-import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemTier;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.text.NBTTextComponent;
-
-import java.awt.*;
 
 public class WitcherSword extends SwordItem {
 

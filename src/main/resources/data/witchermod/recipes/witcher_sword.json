@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "examplemod:silver_ingot"
+      "item": "witchermod:silver_ingot"
     }
   },
   "result": {
-    "item": "examplemod:witcher_sword"
+    "item": "witchermod:witcher_sword"
   }
 }

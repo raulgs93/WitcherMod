@@ -1,4 +1,4 @@
-package com.musgo.examplemod.lib;
+package com.musgo.witchermod.lib;
 
 public class ModItemIDs {
 

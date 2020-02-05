@@ -1,4 +1,4 @@
-package com.musgo.examplemod.init;
+package com.musgo.witchermod.init;
 
 
 import net.minecraft.item.IItemTier;
