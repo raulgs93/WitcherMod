@@ -38,7 +38,7 @@ public class WitcherSword extends SwordItem {
             Main.LOGGER.debug("Hostile human hit! extra damage: " +  extraDamage );
         }
         else{
-            Main.LOGGER.info("this not a monster! extra damage: " + extraDamage );
+            Main.LOGGER.debug("this not a monster! extra damage: " + extraDamage );
         }
 
         return super.hitEntity(stack, target, attacker);
