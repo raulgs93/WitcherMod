@@ -1,7 +1,7 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "examplemod:item/witcher_sword"
+    "layer0": "witchermod:item/witcher_sword"
 
   }
 }

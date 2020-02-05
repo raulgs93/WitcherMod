@@ -1,9 +1,8 @@
-package com.musgo.examplemod.init;
+package com.musgo.witchermod.init;
 
-import com.musgo.examplemod.Main;
+import com.musgo.witchermod.Main;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 
 import java.util.function.Supplier;
 
