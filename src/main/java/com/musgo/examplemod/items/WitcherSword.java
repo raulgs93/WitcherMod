@@ -3,6 +3,7 @@ package com.musgo.examplemod.items;
 import com.musgo.examplemod.Main;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.monster.AbstractRaiderEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.entity.passive.SheepEntity;
@@ -28,17 +29,20 @@ public class WitcherSword extends SwordItem {
 
         int extraDamage = 0;
 
-        if (target instanceof MonsterEntity){
+        if (target instanceof MonsterEntity && !(target instanceof AbstractRaiderEntity)){
             extraDamage = 10;
             target.attackEntityFrom(DamageSource.GENERIC, extraDamage);
             Main.LOGGER.debug("Monster hit! extra damage: " +  extraDamage );
         }
+        else if (target instanceof AbstractRaiderEntity){
+            Main.LOGGER.debug("Hostile human hit! extra damage: " +  extraDamage );
+        }
         else{
-            Main.LOGGER.info("this not a monster! extra damage: " + extraDamage );
+            Main.LOGGER.debug("this not a monster! extra damage: " + extraDamage );
         }
 
         return super.hitEntity(stack, target, attacker);
     }
 }
 
-// new SwordItem(ModToolMaterials.silver, 0, 6.0f, new Item.Properties().group(ModItemGroups.MOD_ITEM_GROUP)).setRegistryName(location(ModItemIDs.WITCHER_SWORD))
+
