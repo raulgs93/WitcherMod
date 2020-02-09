@@ -50,9 +50,9 @@ public class ModPotions {
             final int HARMFUL_DURATION_STRONG = 900;
 
             final Potion[] potions = new Potion[]{
-                    createPotion(new EffectInstance(Effects.INVISIBILITY, HELPFUL_DURATION_STANDARD)),
-                    createPotion(new EffectInstance(Effects.INVISIBILITY, HELPFUL_DURATION_LONG), LONG_PREFIX),
-                    createPotion(new EffectInstance(Effects.INVISIBILITY, HELPFUL_DURATION_STRONG, 1), STRONG_PREFIX),
+                    createPotion(new EffectInstance(ModEffects.TEST, HELPFUL_DURATION_STANDARD)),
+                    createPotion(new EffectInstance(ModEffects.TEST, HELPFUL_DURATION_LONG), LONG_PREFIX),
+                    createPotion(new EffectInstance(ModEffects.TEST, HELPFUL_DURATION_STRONG, 1), STRONG_PREFIX),
             };
 
             event.getRegistry().registerAll(potions);
@@ -80,6 +80,7 @@ public class ModPotions {
          * @return The PotionType
          */
         private static Potion createPotion(final EffectInstance effectInstance, @Nullable final String namePrefix) {
+
             final ResourceLocation effectName = Preconditions.checkNotNull(effectInstance.getPotion().getRegistryName());
 
             final ResourceLocation potionName;
