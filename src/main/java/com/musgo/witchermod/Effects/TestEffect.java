@@ -23,20 +23,29 @@ public class TestEffect extends Effect {
         this(effectType, new Color(liquidR, liquidG, liquidB).getRGB());
     }
 
-    @Override
-    public void performEffect(LivingEntity entityLivingBaseIn, int amplifier) {
-        Main.LOGGER.info("Setting " + entityLivingBaseIn.getName().getFormattedText() + " on fire");
-        entityLivingBaseIn.setFire(3);
-    }
 
     @Override
     public boolean isInstant() {
-        return  true;
+        return  false;
     }
 
     @Override
-    public void affectEntity(@Nullable Entity source, @Nullable Entity indirectSource, LivingEntity entityLivingBaseIn, int amplifier, double health) {
-        Main.LOGGER.info("Setting " + entityLivingBaseIn.getName().getFormattedText() + " on fire from affectEntity");
-        entityLivingBaseIn.setFire(3);
+    public boolean isReady(int duration, int amplifier) {
+
+        if (duration >= 0){
+            Main.LOGGER.debug("Duration is " + duration);
+            return true;
+        }
+        return false;
     }
+
+    @Override
+    public void performEffect(LivingEntity entityLivingBaseIn, int amplifier) {
+        Main.LOGGER.info("Setting " + entityLivingBaseIn.getName().getFormattedText() + " on fire");
+        entityLivingBaseIn.setFire(1);
+    }
+
+
+
+
 }
